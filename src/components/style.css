@@ -1,0 +1,73 @@
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+     align-items: flex-start;
+    padding: 50px; 
+}
+
+.task-list {
+    flex: 0 0 calc(22% - 20px);
+    /* Four task lists in one row */
+    margin: 10px;
+    padding: 16px;
+    background-color: #d60101;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.task-list:hover{
+    background-color: #01a01b;
+    h3{
+color: #fd004c;
+font-weight: bold;
+text-transform: capitalize;
+    }
+}
+.task-list.unplanned {
+    flex: 0 0 calc(50% - 20px);
+    /* Full width for the "Unplanned" task list */
+    background-color: #1b1b1a;
+    color: rgb(240, 5, 5);
+    font-weight: 900;
+    /* Change the background color */
+    
+}
+.task-list.unplanned:hover {
+    background-color: #1ab4b9;
+}
+
+.task-list h3 {
+    margin-bottom: 10px;
+    color: #030303;
+    text-align: center;
+    background-color: #f7d676;
+}
+
+.task {
+    opacity: 1;
+    cursor: move;
+    border: 1px solid #ddd;
+    padding: 8px;
+    margin: 8px;
+    background-color: #acaaaa;
+    border-radius: 4px;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.task:hover {
+    background-color: #5bac5f;
+}
+
+.task.is-dragging {
+    opacity: 0.5;
+   
+}
